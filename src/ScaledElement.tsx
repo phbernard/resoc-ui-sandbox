@@ -4,6 +4,7 @@ import CSS from 'csstype';
 
 export type ScaledElementProps = {
   children: ReactFragment;
+  className?: string;
 };
 
 const ScaledElement = (props: ScaledElementProps) => {
@@ -37,7 +38,7 @@ const ScaledElement = (props: ScaledElementProps) => {
   }
 
   return (
-    <div ref={self} style={selfStyles}>
+    <div ref={self} style={selfStyles} className={props.className}>
       <div ref={children} style={childrenStyles}>
         {props.children}
       </div>
